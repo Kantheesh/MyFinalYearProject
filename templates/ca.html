@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+</style>
+</head>
+<body><br>
+<ul>
+	<li><a href="/login">PATIENT</a></li>
+	<li><a href="/cloudserver">CLOUD SERVER</a></li>
+	<li><a href="/ca">CA</a></li>
+	<li><a href="/dataowner">DOCTOR</a></li>
+	<li><a href="/">HOME</a></li>
+</ul>
+
+<div class="container">
+    <div align="center"><h2 style="color:#f5e642;"> <strong>{{msg}}</strong></h2></div>
+    <section id="content">
+        <form action="{{url_for('ca1')}}" method="post">
+            <h1>CA Login</h1>
+            <div>
+                <input type="text" placeholder="Enter Username" name="username" required="Please Fill This Line" id="username" />
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="password" required="Please Fill This Line" id="password" />
+            </div>
+            <div>
+                <input type="submit" value="Log in"/>
+
+         </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+</div><!-- container -->
+
+
+</body>
+</html>

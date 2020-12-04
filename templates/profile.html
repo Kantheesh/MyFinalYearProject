@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+	table{
+	    background-color:#02330f!important;
+	    color: white!important;
+	    border:1!important;
+	}
+
+</style>
+</head>
+<body><br>
+<ul>
+	<li><a href="/">LOGOUT</a></li>
+	<li><a href="/profile">PROFILE</a></li>
+	<li><a href="/download">DOWNLOAD FILE</a></li>
+	<li><a href="/requestfiles">REQUESTED FILES</a></li>
+	<li><a href="/viewfiles2">FILES</a></li>
+	<li><a href="/userhome">HOME</a></li>
+</ul>
+
+<h3 align="center"  style = "color:red!important">UPDATE PROFILE </h3>
+<div align="center" >
+{% block content %}
+<h1 style="background-color:black;"></h1>
+    <div  style="background-color:">
+    <font style = "color:white!important">
+
+        <table>
+            <tr>
+                {% for field in users.columns %}
+                <th> {{ field }} </th>
+                {% endfor %}
+                <th> Update</th>
+            </tr>
+                {% for i in range(users.shape[0]) %}
+                    <tr>
+                    {% for j in range(users.shape[1]) %}
+                             <td>{{users.loc[i][j]}}</td>
+                    {% endfor %}
+                         <td><a href = "{{url_for('update')}}">Update</a></td>
+                     </tr>
+                {% endfor %}
+        </table>
+    </font>
+    </div>
+{% endblock %}
+</div>
+</body>
+</html>

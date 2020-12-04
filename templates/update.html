@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+</style>
+</head>
+<body><br>
+<ul>
+	<li><a href="/">LOGOUT</a></li>
+	<li><a href="/profile">PROFILE</a></li>
+	<li><a href="/download">DOWNLOAD FILE</a></li>
+	<li><a href="/requestfiles">REQUESTED FILES</a></li>
+	<li><a href="/viewfiles2">FILES</a></li>
+	<li><a href="/userhome">HOME</a></li>
+</ul>
+
+<div class="container">
+    {% if msg == "success" %}
+        <div align="center"><h2 style="color:#f5e642;"> <strong>Updation Successful</strong></h2></div>
+    {% endif %}
+    <section id="content">
+        <form action="{{url_for('update1')}}" method="post" onsubmit="return validateForm()">
+            <h1>Update Record</h1>
+            <div>
+                <input type="text" placeholder="Enter Name" name="name" required="Please Fill This Line" id="username" />
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="password" required="Please Fill This Line" id="password" />
+            </div>
+            <div><input type="text" placeholder="Enter Number" name="number" required/></div>
+            <div>
+                <input type="submit" value="UPDATE"/>
+                <!-- <a href="registration.jsp">New Register</a> -->
+         </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+</div><!-- container -->
+
+</body>
+</html>

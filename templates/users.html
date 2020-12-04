@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+	table{
+	    background-color:#02330f!important;
+	    color: white!important;
+	    border:1!important;
+	}
+</style>
+</head>
+<body><br>
+<ul>
+	<li><a href="/ca">LOGOUT</a></li>
+	<li><a href="/users">USERS</a></li>
+	<li><a href="/accepted1">ACCEPTED USERS</a></li>
+	<li><a href="/viewrequest">USER REQUESTS</a></li>
+	<li><a href="/cahome">HOME</a></li>
+</ul>
+
+<h1 align="center"  style = "color:white!important">USERS </h1>
+<div align="center" >
+{% block content %}
+
+<h1 style="background-color:black;">{{name}}</h1>
+    <div  style="background-color:">
+    <font style = "color:white!important">
+        {{data | safe}}
+    </font>
+    </div>
+{% endblock %}
+</div>
+
+
+</body>
+</html>

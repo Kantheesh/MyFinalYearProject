@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+	table{
+	    background-color:#02330f!important;
+	    color: white!important;
+	    border:1!important;
+	}
+</style>
+</head>
+<body><br>
+<ul>
+	<ul>
+		<li><a href="/login">DATA AGENT</a></li>
+    	<li><a href="/filedownload">DOWNLOAD</a></li>
+		<li><a href="/viewfiles4">VIEW FILES</a></li>
+		<li><a href="/">HOME</a></li>
+	</ul>
+
+</ul>
+
+<h1 align="center"  style = "color:white!important">FILES ON THE CLOUD </h1>
+<div align="center" >
+    <div class="container">
+        {% if data=='null' %}
+            <div align="center"><h2 style="color:#f5e642;"> <strong>No matching File</strong></h2></div>
+        {% endif %}
+    <section id="content1">
+        <form action="{{url_for('searchforfile')}}" method="post">
+            <h1>User Login</h1>
+            <div>
+                <input type="text" placeholder="Enter File" name="file" required="Please Fill This Line"  />
+            </div>
+
+            <div>
+                <input type="submit" value="search"/>
+
+         </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+</div><!-- container -->
+</div>
+<br><br>
+<div align="center" >
+    <div class="container">
+    <div align="center"><h2 style="color:#f5e642;"> <strong>{{msg}}</strong></h2></div>
+    <section id="content2">
+        <form action="{{url_for('tryfordownload')}}" method="post">
+            <h1>User Login</h1>
+            <div>
+                <textarea rows ="7" cols="100" name="content" required="Please Fill This Line">{{data}}</textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="download"/>
+
+         </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+</div><!-- container -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DATA LEAKAGE DETECTION</title>
+   <!-- core STATIC/CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.js"></script>
+    <script src="static/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body{
+            background-image: url("static/images/ehr.jpg");
+            background-size:1500px;
+            background-repeat: no-repeat;
+            background-color:#032280;
+            }
+    </style>
+
+</head><!--/head-->
+
+
+<body   id="home" class="homepage" >
+<br><br>
+<div>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<div class="container">
+
+		</div>
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top top-nav-collapse" role="banner">
+            <div class="container">
+
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/login">PATIENT</a></li>
+                        <li><a href="/dataagent">DATA AGENT</a></li>
+                        <li><a href="/cloudserver">CLOUD SERVER</a></li>
+                        <!--<li><a href="/ca">CA</a></li>-->
+                        <li><a href="/dataowner">DOCTOR</a></li>
+                        <li><a href="/">HOME</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    <br>
+
+    <div class="container">
+    <div align="center"><h2 style="color:#f5e642;"> <strong>{{msg}}</strong></h2></div>
+    <section id="content">
+        <form action="{{url_for('dataagentlogin')}}" method="post">
+            <h1>Agent Login</h1>
+            <div>
+                <input type="text" placeholder="Enter username" name="user" required="Please Fill This Line" id="username" />
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="password" required="Please Fill This Line" id="password" />
+            </div>
+            <div>
+                <input type="submit" value="Log in"/>
+                <a href="{{url_for('registeragent')}}">Register</a>
+         </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+    </div>
+</div>
+</body>
+
+    <footer id="footer">
+        <div class="container text-center">
+          All rights reserved ©
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/static/js?sensor=true"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/mousescroll.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+    <script src="static/js/jquery.prettyPhoto.js"></script>
+    <script src="static/js/jquery.isotope.min.js"></script>
+    <script src="static/js/jquery.inview.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/main.js"></script>
+   <script src="static/js/scrolling-nav.js"></script>
+<script>
+</script>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+	table{
+	    background-color:#02330f!important;
+	    color: white!important;
+	    border:1!important;
+	}
+</style>
+</head>
+<body><br>
+<ul>
+	<li><a href="/">LOGOUT</a></li>
+	<li><a href="/profile">PROFILE</a></li>
+	<li><a href="/download">DOWNLOAD FILE</a></li>
+	<li><a href="/requestfiles">REQUESTED FILES</a></li>
+	<li><a href="/viewfiles2">FILES</a></li>
+	<li><a href="/userhome">HOME</a></li>
+</ul>
+<br><br>
+<h3 align="center"  style = "color:white!important">SEARCH WTIH SEMANTICS </h3>
+<div align="center" >
+        {% if msg == 'failure' %}
+            <h3 style="background-color:white;">No Records as per Query</h3>
+        {% endif %}
+        <div  style="background-color:text-align:center;">
+        <font style = "color:white!important"><br><br>
+         <div style="width:500px;height:100px;border:3px solid #ffff;background-color=#45446;border-radius:15px;display:inline-block;">
+             <table border="2">
+                 <tr>
+                     <td>File Name</td>
+                     <td>Operation</td>
+                 </tr>
+            {% for i in range(data.shape[0]) %}
+                 <tr>
+                     {% for j in range(data.shape[1]) %}
+                        <td>{{data.iloc[i][j]}}</td>
+                     {% endfor %}
+                        <td><a href="{{url_for('keydownload',fname1=data.iloc[0][0])}}">Download</a></td>
+                 </tr>
+                 {% endfor %}
+             </table>
+        </div>
+        </font>
+        </div>
+
+
+</div>
+</body>
+</html>

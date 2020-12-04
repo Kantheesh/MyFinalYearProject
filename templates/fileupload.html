@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DATA LEAKAGE DETECTION</title>
+<h1 style="color:#300502"><center>DATA LEAKAGE DETECTION IN CLOUD COMPUTING</center></h1>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<style>
+	body {
+	  background-image: url('static/images/ehr.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: 100% 100%;
+	}
+</style>
+</head>
+<body><br>
+<ul>
+	<ul>
+	<li><a href="/dataowner">LOGOUT</a></li>
+	<li><a href="/viewusers">USERS</a></li>
+	<li><a href="/fileupload">UPLOAD</a></li>
+	<li><a href="/ownerhome">HOME</a></li>
+</ul>
+</ul>
+<<div class="container">
+	<div align="center"><h2 style="color:#f5e642;"> <strong>{{msg}}</strong></h2></div>
+    <section id="content">
+        <form action="{{url_for('upload')}}" method="post">
+            <h3>File Upload</h3>
+            <div>
+                <input type="text" placeholder="Doctor Name" name="dname" required="Please Fill This Line" id="dname" />
+            </div>
+            <div>
+                <input type="text" placeholder="Doctor Email" name="demail" required="Please Fill This Line" id="demail" />
+            </div>
+            <div>
+                <input type="text" placeholder="Patient Name" name="pname" required="Please Fill This Line" id="username" />
+            </div>
+            <div>
+                <input type="text" placeholder="Patient Email" name="pemail" required="Please Fill This Line" id="pemail" />
+            </div>
+            <div>
+                <input type="text" placeholder="Patient Disease" name="disease" required="Please Fill This Line" id="disease" />
+            </div>
+            <div>
+                <input type="text" placeholder="Patient age" name="age" required="Please Fill This Line" id="age" />
+            </div>
+            <div><input type="text" placeholder="File Name" name="fname" required id="fname"/></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="pfile" required style="color:red"/></div>
+            <div>
+                <input type="submit" value="Submit"/>
+<!--                 <a href="#">Register</a>
+ -->            </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+</div><!-- container -->
+
+</body>
+</html>
